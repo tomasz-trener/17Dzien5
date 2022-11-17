@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace P02AplikacjaZawodnicy
     {
 
         ManagerZawodnikow mz;
+        SaveFileDialog sfd;
         public Form1()
         {
             InitializeComponent();
@@ -69,7 +72,7 @@ namespace P02AplikacjaZawodnicy
             Zawodnik[] zawodnicy = (Zawodnik[])lblDane.DataSource;
             
 
-            SaveFileDialog sfd = new SaveFileDialog();
+            sfd = new SaveFileDialog();
             sfd.InitialDirectory = "c:\\dane";
             sfd.Title = "Wskaż miejsce zapisu zawodnikow";
             sfd.Filter = "Pliki pdf (*.pdf)|*.pdf";
@@ -81,8 +84,17 @@ namespace P02AplikacjaZawodnicy
             {
                 PDFManager pm = new PDFManager(sfd.FileName);
                 pm.WygenerujPDF(zawodnicy);
+                wbPrzegladrka.Navigate(sfd.FileName);
             }
+
             
+            
+        }
+
+        private void btnOtworzFolder_Click(object sender, EventArgs e)
+        {
+            string folder = Path.GetDirectoryName(sfd.FileName);
+            Process.Start(folder);
         }
 
 

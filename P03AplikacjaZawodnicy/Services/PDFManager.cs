@@ -29,7 +29,6 @@ namespace P03AplikacjaZawodnicy.Services
             for (int i = 0; i < zawodnicy.Length; i++)
                 gfx.DrawString(zawodnicy[i].DaneRaportowe, font, XBrushes.Aqua, 40, 50 + 25*i);
 
-    
             document.Save(sciezka);
             // ...and start a viewer.
 

@@ -49,6 +49,8 @@
             this.txtImie = new System.Windows.Forms.TextBox();
             this.btnZapisz = new System.Windows.Forms.Button();
             this.btnGenerujPDF = new System.Windows.Forms.Button();
+            this.wbPrzegladrka = new System.Windows.Forms.WebBrowser();
+            this.btnOtworzFolder = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,11 +243,31 @@
             this.btnGenerujPDF.UseVisualStyleBackColor = true;
             this.btnGenerujPDF.Click += new System.EventHandler(this.btnGenerujPDF_Click);
             // 
+            // wbPrzegladrka
+            // 
+            this.wbPrzegladrka.Location = new System.Drawing.Point(581, 76);
+            this.wbPrzegladrka.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbPrzegladrka.Name = "wbPrzegladrka";
+            this.wbPrzegladrka.Size = new System.Drawing.Size(250, 250);
+            this.wbPrzegladrka.TabIndex = 14;
+            // 
+            // btnOtworzFolder
+            // 
+            this.btnOtworzFolder.Location = new System.Drawing.Point(581, 43);
+            this.btnOtworzFolder.Name = "btnOtworzFolder";
+            this.btnOtworzFolder.Size = new System.Drawing.Size(250, 23);
+            this.btnOtworzFolder.TabIndex = 15;
+            this.btnOtworzFolder.Text = "Otwórz folder";
+            this.btnOtworzFolder.UseVisualStyleBackColor = true;
+            this.btnOtworzFolder.Click += new System.EventHandler(this.btnOtworzFolder_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 369);
+            this.ClientSize = new System.Drawing.Size(853, 369);
+            this.Controls.Add(this.btnOtworzFolder);
+            this.Controls.Add(this.wbPrzegladrka);
             this.Controls.Add(this.btnGenerujPDF);
             this.Controls.Add(this.btnZapisz);
             this.Controls.Add(this.groupBox1);
@@ -287,6 +309,8 @@
         private System.Windows.Forms.TextBox txtImie;
         private System.Windows.Forms.Button btnZapisz;
         private System.Windows.Forms.Button btnGenerujPDF;
+        private System.Windows.Forms.WebBrowser wbPrzegladrka;
+        private System.Windows.Forms.Button btnOtworzFolder;
     }
 }
 
