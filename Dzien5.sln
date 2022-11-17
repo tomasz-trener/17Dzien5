@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01PrzegladKontrolek", "P01PrzegladKontrolek\P01PrzegladKontrolek.csproj", "{37D81ECC-06E2-4A3E-B0D4-71277832635D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02ZadaniePogoda", "P02ZadaniePogoda\P02ZadaniePogoda.csproj", "{303ADEF7-E1F3-435B-93F9-604D4802952B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37D81ECC-06E2-4A3E-B0D4-71277832635D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D81ECC-06E2-4A3E-B0D4-71277832635D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D81ECC-06E2-4A3E-B0D4-71277832635D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D81ECC-06E2-4A3E-B0D4-71277832635D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{303ADEF7-E1F3-435B-93F9-604D4802952B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303ADEF7-E1F3-435B-93F9-604D4802952B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303ADEF7-E1F3-435B-93F9-604D4802952B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303ADEF7-E1F3-435B-93F9-604D4802952B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22A356F5-193D-4732-9DF2-5A193244478F}
+	EndGlobalSection
+EndGlobal
