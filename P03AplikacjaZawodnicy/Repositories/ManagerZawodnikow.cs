@@ -182,5 +182,10 @@ namespace P03AplikacjaZawodnicy.Repositories
             File.WriteAllLines("c:\\dane\\zawodnicy.txt", dane,Encoding.UTF8);
         }
 
+        //Microsoft® SQL Server® 2019 Express 
+        //SQL Server Management Studio (SSMS)
+
+
+
     }
 }

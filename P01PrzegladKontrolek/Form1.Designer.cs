@@ -40,7 +40,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnZapisz = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -66,15 +65,16 @@
             this.btnSprawdzZaznaczenia = new System.Windows.Forms.Button();
             this.clbElementy = new System.Windows.Forms.CheckedListBox();
             this.cbPlec = new System.Windows.Forms.CheckBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -122,20 +122,8 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(917, 598);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Zakładka pierwsza";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.webBrowser1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(917, 598);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // treeView1
             // 
@@ -275,6 +263,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(338, 174);
             this.pictureBox1.Name = "pictureBox1";
@@ -357,7 +346,7 @@
             // 
             this.btnSprawdzZaznaczenia.Location = new System.Drawing.Point(60, 168);
             this.btnSprawdzZaznaczenia.Name = "btnSprawdzZaznaczenia";
-            this.btnSprawdzZaznaczenia.Size = new System.Drawing.Size(75, 23);
+            this.btnSprawdzZaznaczenia.Size = new System.Drawing.Size(142, 32);
             this.btnSprawdzZaznaczenia.TabIndex = 26;
             this.btnSprawdzZaznaczenia.Text = "Sprawdź";
             this.btnSprawdzZaznaczenia.UseVisualStyleBackColor = true;
@@ -384,13 +373,17 @@
             this.cbPlec.Text = "Płeć";
             this.cbPlec.UseVisualStyleBackColor = true;
             // 
-            // webBrowser1
+            // tabPage2
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(22, 46);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(829, 528);
-            this.webBrowser1.TabIndex = 47;
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.webBrowser1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(917, 598);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Zakładka druga";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -401,6 +394,14 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(22, 46);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(829, 528);
+            this.webBrowser1.TabIndex = 47;
             // 
             // tabPage3
             // 
@@ -425,11 +426,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

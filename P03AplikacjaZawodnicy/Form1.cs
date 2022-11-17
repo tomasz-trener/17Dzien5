@@ -85,10 +85,7 @@ namespace P02AplikacjaZawodnicy
                 PDFManager pm = new PDFManager(sfd.FileName);
                 pm.WygenerujPDF(zawodnicy);
                 wbPrzegladrka.Navigate(sfd.FileName);
-            }
-
-            
-            
+            }          
         }
 
         private void btnOtworzFolder_Click(object sender, EventArgs e)
