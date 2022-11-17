@@ -48,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtImie = new System.Windows.Forms.TextBox();
             this.btnZapisz = new System.Windows.Forms.Button();
+            this.btnGenerujPDF = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -230,11 +231,22 @@
             this.btnZapisz.UseVisualStyleBackColor = true;
             this.btnZapisz.Click += new System.EventHandler(this.btnZapisz_Click);
             // 
+            // btnGenerujPDF
+            // 
+            this.btnGenerujPDF.Location = new System.Drawing.Point(367, 324);
+            this.btnGenerujPDF.Name = "btnGenerujPDF";
+            this.btnGenerujPDF.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerujPDF.TabIndex = 13;
+            this.btnGenerujPDF.Text = "PDF";
+            this.btnGenerujPDF.UseVisualStyleBackColor = true;
+            this.btnGenerujPDF.Click += new System.EventHandler(this.btnGenerujPDF_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 369);
+            this.Controls.Add(this.btnGenerujPDF);
             this.Controls.Add(this.btnZapisz);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -274,6 +286,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtImie;
         private System.Windows.Forms.Button btnZapisz;
+        private System.Windows.Forms.Button btnGenerujPDF;
     }
 }
 

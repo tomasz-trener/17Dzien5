@@ -1,5 +1,6 @@
 ﻿using P03AplikacjaZawodnicy.Domain;
 using P03AplikacjaZawodnicy.Repositories;
+using P03AplikacjaZawodnicy.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +61,14 @@ namespace P02AplikacjaZawodnicy
             zaznaczony.Waga = Convert.ToInt32(txtWaga.Text);
 
             mz.Zapisz(zaznaczony);
+
+        }
+
+        private void btnGenerujPDF_Click(object sender, EventArgs e)
+        {
+            Zawodnik[] zawodnicy = (Zawodnik[])lblDane.DataSource;
+            PDFManager pm = new PDFManager();
+            pm.WygenerujPDF(zawodnicy);
 
         }
 

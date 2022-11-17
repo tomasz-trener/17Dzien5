@@ -11,7 +11,7 @@ namespace P03AplikacjaZawodnicy.Services
 {
     internal class PDFManager
     {
-        void WygenerujPDF(Zawodnik[] zawodnicy)
+        public void WygenerujPDF(Zawodnik[] zawodnicy)
         {       
             PdfDocument document = new PdfDocument();
             document.Info.Title = "Raport zawodnicy";
