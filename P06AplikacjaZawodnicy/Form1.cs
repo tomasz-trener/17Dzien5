@@ -30,7 +30,16 @@ namespace P02AplikacjaZawodnicy
         }
 
         private void lblDane_SelectedIndexChanged(object sender, EventArgs e)
-        { 
+        {
+            Zawodnik zaznaczony = (Zawodnik)lblDane.SelectedItem;
+            //Zawodnik zaznaczony = lblDane.SelectedItem as Zawodnik;
+
+            txtImie.Text = zaznaczony.Imie;
+            txtNazwisko.Text = zaznaczony.Nazwisko;
+            txtKrajZawodnika.Text = zaznaczony.Kraj;
+            txtDaraUr.Text = Convert.ToString(zaznaczony.DataUrodzenia);
+            txtWzrost.Text = Convert.ToString(zaznaczony.Wzrost);
+            txtWaga.Text = Convert.ToString(zaznaczony.Waga);
         }
 
 
