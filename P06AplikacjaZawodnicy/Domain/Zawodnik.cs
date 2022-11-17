@@ -24,5 +24,11 @@ namespace P03AplikacjaZawodnicy.Domain
                 return  Nazwisko + " " + Imie.Substring(0,1) + ".";
             }
         }
+
+        public string Wiersz =>
+                    $"{Id_zawodnika};{Id_trenera};{Imie};{Nazwisko};{Kraj};" +
+                    $"{DataUrodzenia.ToString("yyyy-MM-dd")};{Wzrost};{Waga}";
+            
+        
     }
 }

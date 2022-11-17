@@ -25,7 +25,7 @@ namespace P02AplikacjaZawodnicy
             mz = new ManagerZawodnikow(TypImportu.Zdalny, txtUrl.Text);
             mz.WczytajZawodnikow();
 
-            lblDane.DataSource = mz.Zawodnicy; // Data binding 
+            lblDane.DataSource = mz.PodajZawodnikow(txtKraj.Text); // Data binding 
             lblDane.DisplayMember = "ImieNazwisko";
         }
 
@@ -37,9 +37,30 @@ namespace P02AplikacjaZawodnicy
             txtImie.Text = zaznaczony.Imie;
             txtNazwisko.Text = zaznaczony.Nazwisko;
             txtKrajZawodnika.Text = zaznaczony.Kraj;
-            txtDaraUr.Text = Convert.ToString(zaznaczony.DataUrodzenia);
+            txtDaraUr.Text = zaznaczony.DataUrodzenia.ToString("dd-MM-yyyy"); //Convert.ToString(zaznaczony.DataUrodzenia);
             txtWzrost.Text = Convert.ToString(zaznaczony.Wzrost);
             txtWaga.Text = Convert.ToString(zaznaczony.Waga);
+        }
+
+        private void btnZapisz_Click(object sender, EventArgs e)
+        {
+            Zawodnik zaznaczony = (Zawodnik)lblDane.SelectedItem;
+
+            zaznaczony.Imie = txtImie.Text;
+            zaznaczony.Nazwisko = txtNazwisko.Text;
+            zaznaczony.Kraj = txtKrajZawodnika.Text;
+
+            // zaznaczony.DataUrodzenia = Convert.ToDateTime(txtDaraUr.Text);
+            string[] dataStr = txtDaraUr.Text.Split('-');
+            zaznaczony.DataUrodzenia = new DateTime(
+                Convert.ToInt32(dataStr[2]), Convert.ToInt32(dataStr[1]), Convert.ToInt32(dataStr[0])
+                );
+
+            zaznaczony.Wzrost = Convert.ToInt32(txtWzrost.Text);
+            zaznaczony.Waga = Convert.ToInt32(txtWaga.Text);
+
+            mz.Zapisz(zaznaczony);
+
         }
 
 

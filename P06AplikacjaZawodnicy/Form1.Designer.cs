@@ -47,6 +47,7 @@
             this.txtWzrost = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtWaga = new System.Windows.Forms.TextBox();
+            this.btnZapisz = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -219,11 +220,22 @@
             this.txtWaga.Size = new System.Drawing.Size(193, 20);
             this.txtWaga.TabIndex = 10;
             // 
+            // btnZapisz
+            // 
+            this.btnZapisz.Location = new System.Drawing.Point(485, 324);
+            this.btnZapisz.Name = "btnZapisz";
+            this.btnZapisz.Size = new System.Drawing.Size(75, 23);
+            this.btnZapisz.TabIndex = 12;
+            this.btnZapisz.Text = "Zapisz";
+            this.btnZapisz.UseVisualStyleBackColor = true;
+            this.btnZapisz.Click += new System.EventHandler(this.btnZapisz_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 369);
+            this.Controls.Add(this.btnZapisz);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -261,6 +273,7 @@
         private System.Windows.Forms.TextBox txtNazwisko;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtImie;
+        private System.Windows.Forms.Button btnZapisz;
     }
 }
 

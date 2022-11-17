@@ -167,5 +167,18 @@ namespace P03AplikacjaZawodnicy.Repositories
 
         }
 
+        public void Zapisz(Zawodnik z)
+        {
+            for (int i = 0; i < zawodnicy.Length; i++)
+                if (zawodnicy[i].Id_zawodnika == z.Id_zawodnika)
+                    zawodnicy[i] = z;
+
+            string[] dane = new string[zawodnicy.Length];
+            for (int i = 0; i < zawodnicy.Length; i++)
+                dane[i] = 
+
+            File.WriteAllLines("c:\\dane\\zawodnicy.txt", dane);
+        }
+
     }
 }
