@@ -173,9 +173,11 @@ namespace P03AplikacjaZawodnicy.Repositories
                 if (zawodnicy[i].Id_zawodnika == z.Id_zawodnika)
                     zawodnicy[i] = z;
 
-            string[] dane = new string[zawodnicy.Length];
+            string[] dane = new string[zawodnicy.Length+1];
+            dane[0] = "id_zawodnika;id_trenera;imie;nazwisko;kraj;data urodzenia;wzrost;waga";
+
             for (int i = 0; i < zawodnicy.Length; i++)
-                dane[i] = 
+                dane[i+1] = zawodnicy[i].Wiersz;
 
             File.WriteAllLines("c:\\dane\\zawodnicy.txt", dane);
         }
