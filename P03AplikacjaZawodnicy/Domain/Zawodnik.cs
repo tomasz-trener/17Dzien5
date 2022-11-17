@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,10 +26,14 @@ namespace P03AplikacjaZawodnicy.Domain
             }
         }
 
+        public string DataSformatowana => DataUrodzenia.ToString("yyyy-MM-dd");
+
         public string Wiersz =>
                     $"{Id_zawodnika};{Id_trenera};{Imie};{Nazwisko};{Kraj};" +
-                    $"{DataUrodzenia.ToString("yyyy-MM-dd")};{Wzrost};{Waga}";
-            
+                    $"{DataSformatowana};{Wzrost};{Waga}";
+
+        public string DaneRaportowe =>
+            $"{Imie} {Nazwisko} {Kraj} {DataSformatowana}";
         
     }
 }
