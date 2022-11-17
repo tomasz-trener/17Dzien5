@@ -21,8 +21,12 @@ namespace P02AplikacjaZawodnicy
             InitializeComponent();
         }
         private void btnWczytaj_Click(object sender, EventArgs e)
-        { 
+        {
+            mz = new ManagerZawodnikow(TypImportu.Zdalny, txtUrl.Text);
+            mz.WczytajZawodnikow();
 
+            lblDane.DataSource = mz.Zawodnicy; // Data binding 
+            lblDane.DisplayMember = "ImieNazwisko";
         }
 
         private void lblDane_SelectedIndexChanged(object sender, EventArgs e)

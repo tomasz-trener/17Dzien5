@@ -16,5 +16,13 @@ namespace P03AplikacjaZawodnicy.Domain
         public DateTime DataUrodzenia { get; set; }
         public int Wzrost { get; set; }
         public int Waga { get; set; }
+
+        public string ImieNazwisko
+        {
+            get
+            {
+                return  Nazwisko + " " + Imie.Substring(0,1) + ".";
+            }
+        }
     }
 }
