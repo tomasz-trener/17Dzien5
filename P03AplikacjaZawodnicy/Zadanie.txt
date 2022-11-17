@@ -13,7 +13,7 @@ Pamiętaj żeby nie umieszczać kodu przetwrzająćego dane wewntrz klasy From
 Cała logikę genreowania PDF umieść w osobnej klasie: PDFManager
 
 w klaske PDFManager powinna znajdować się metoda: 
- 
+  
  void WygenerujPDF(Zawodnik[] zawodnicy)
  {
  ....
