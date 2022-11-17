@@ -67,9 +67,22 @@ namespace P02AplikacjaZawodnicy
         private void btnGenerujPDF_Click(object sender, EventArgs e)
         {
             Zawodnik[] zawodnicy = (Zawodnik[])lblDane.DataSource;
-            PDFManager pm = new PDFManager();
-            pm.WygenerujPDF(zawodnicy);
+            
 
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.InitialDirectory = "c:\\dane";
+            sfd.Title = "Wskaż miejsce zapisu zawodnikow";
+            sfd.Filter = "Pliki pdf (*.pdf)|*.pdf";
+
+            const string filename = "_Raport.pdf";
+            sfd.FileName = DateTime.Now.ToString("ssmmhhddMMyy") + filename;
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                PDFManager pm = new PDFManager(sfd.FileName);
+                pm.WygenerujPDF(zawodnicy);
+            }
+            
         }
 
 

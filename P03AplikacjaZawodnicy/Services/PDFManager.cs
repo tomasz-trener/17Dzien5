@@ -11,6 +11,13 @@ namespace P03AplikacjaZawodnicy.Services
 {
     internal class PDFManager
     {
+        private readonly string sciezka;
+
+        public PDFManager(string sciezka)
+        {
+            this.sciezka = sciezka;
+        }
+
         public void WygenerujPDF(Zawodnik[] zawodnicy)
         {       
             PdfDocument document = new PdfDocument();
@@ -22,11 +29,8 @@ namespace P03AplikacjaZawodnicy.Services
             for (int i = 0; i < zawodnicy.Length; i++)
                 gfx.DrawString(zawodnicy[i].DaneRaportowe, font, XBrushes.Aqua, 40, 50 + 25*i);
 
-            // Save the document...
-            string pre = DateTime.Now.ToString("ssmmhhddMMyy");
-            string filename =  pre + "_Raport.pdf";
-
-            document.Save(filename);
+    
+            document.Save(sciezka);
             // ...and start a viewer.
 
 
