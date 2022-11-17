@@ -2,7 +2,7 @@
 
 Program pozwala na wczytanie nazwy miasta z listy rozwijanej
 (elementy listy rozwinaje zapisane są w pliku miasta.txt)
-
+ 
 po kliknieciu przycisku wczytaj , w  labelce pojawia się 
 aktualna tmeperatura dla  danego miasta, pobrana z google. 
 
