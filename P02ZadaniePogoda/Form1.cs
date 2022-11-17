@@ -40,5 +40,35 @@ namespace P02ZadaniePogoda
             }
             
         }
+
+        private void btnPodajTemperature_Click(object sender, EventArgs e)
+        {
+            ManagerPogody mp = new ManagerPogody();
+            mp.SzukanyZnak = "°";
+
+            // string jednostka = rbCel.Checked ? rbCel.Text : rbFar.Checked ? rbFar.Text : rbKel.Text;
+            string jednostka;
+            if (rbCel.Checked)
+                jednostka = rbCel.Text.ToLower();
+            else if (rbFar.Checked)
+                jednostka = rbFar.Text.ToLower();
+            else
+                jednostka = rbKel.Text.ToLower();
+
+            mp.Jednostka = jednostka;
+            //mp.Jednostka = "c";
+
+            string miasto = cbMiasta.Text;
+            if (string.IsNullOrEmpty(miasto))
+            {
+                MessageBox.Show("Nie wybrano miasta","Błąd",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
+            double temp = mp.PodajTemperature(miasto);
+            lblRaport.Text = String.Format("Temperatura w mieście {0} wynosi {1}",
+                miasto, temp);
+
+        }
     }
 }

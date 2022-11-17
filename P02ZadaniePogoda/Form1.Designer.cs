@@ -32,6 +32,12 @@
             this.cbMiasta = new System.Windows.Forms.ComboBox();
             this.ofdPliki = new System.Windows.Forms.OpenFileDialog();
             this.btnWczytajMiasta = new System.Windows.Forms.Button();
+            this.btnPodajTemperature = new System.Windows.Forms.Button();
+            this.lblRaport = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rbCel = new System.Windows.Forms.RadioButton();
+            this.rbFar = new System.Windows.Forms.RadioButton();
+            this.rbKel = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -65,11 +71,77 @@
             this.btnWczytajMiasta.UseVisualStyleBackColor = true;
             this.btnWczytajMiasta.Click += new System.EventHandler(this.btnWczytajMiasta_Click);
             // 
+            // btnPodajTemperature
+            // 
+            this.btnPodajTemperature.Location = new System.Drawing.Point(12, 86);
+            this.btnPodajTemperature.Name = "btnPodajTemperature";
+            this.btnPodajTemperature.Size = new System.Drawing.Size(119, 23);
+            this.btnPodajTemperature.TabIndex = 3;
+            this.btnPodajTemperature.Text = "Podaj temperature";
+            this.btnPodajTemperature.UseVisualStyleBackColor = true;
+            this.btnPodajTemperature.Click += new System.EventHandler(this.btnPodajTemperature_Click);
+            // 
+            // lblRaport
+            // 
+            this.lblRaport.AutoSize = true;
+            this.lblRaport.Location = new System.Drawing.Point(12, 124);
+            this.lblRaport.Name = "lblRaport";
+            this.lblRaport.Size = new System.Drawing.Size(35, 13);
+            this.lblRaport.TabIndex = 4;
+            this.lblRaport.Text = "label2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(137, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "w";
+            // 
+            // rbCel
+            // 
+            this.rbCel.AutoSize = true;
+            this.rbCel.Checked = true;
+            this.rbCel.Location = new System.Drawing.Point(158, 89);
+            this.rbCel.Name = "rbCel";
+            this.rbCel.Size = new System.Drawing.Size(32, 17);
+            this.rbCel.TabIndex = 6;
+            this.rbCel.TabStop = true;
+            this.rbCel.Text = "C";
+            this.rbCel.UseVisualStyleBackColor = true;
+            // 
+            // rbFar
+            // 
+            this.rbFar.AutoSize = true;
+            this.rbFar.Location = new System.Drawing.Point(196, 89);
+            this.rbFar.Name = "rbFar";
+            this.rbFar.Size = new System.Drawing.Size(31, 17);
+            this.rbFar.TabIndex = 7;
+            this.rbFar.Text = "F";
+            this.rbFar.UseVisualStyleBackColor = true;
+            // 
+            // rbKel
+            // 
+            this.rbKel.AutoSize = true;
+            this.rbKel.Location = new System.Drawing.Point(233, 89);
+            this.rbKel.Name = "rbKel";
+            this.rbKel.Size = new System.Drawing.Size(32, 17);
+            this.rbKel.TabIndex = 8;
+            this.rbKel.Text = "K";
+            this.rbKel.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 192);
+            this.Controls.Add(this.rbKel);
+            this.Controls.Add(this.rbFar);
+            this.Controls.Add(this.rbCel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblRaport);
+            this.Controls.Add(this.btnPodajTemperature);
             this.Controls.Add(this.btnWczytajMiasta);
             this.Controls.Add(this.cbMiasta);
             this.Controls.Add(this.label1);
@@ -86,6 +158,12 @@
         private System.Windows.Forms.ComboBox cbMiasta;
         private System.Windows.Forms.OpenFileDialog ofdPliki;
         private System.Windows.Forms.Button btnWczytajMiasta;
+        private System.Windows.Forms.Button btnPodajTemperature;
+        private System.Windows.Forms.Label lblRaport;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbCel;
+        private System.Windows.Forms.RadioButton rbFar;
+        private System.Windows.Forms.RadioButton rbKel;
     }
 }
 
