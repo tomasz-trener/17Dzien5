@@ -179,7 +179,7 @@ namespace P03AplikacjaZawodnicy.Repositories
             for (int i = 0; i < zawodnicy.Length; i++)
                 dane[i+1] = zawodnicy[i].Wiersz;
 
-            File.WriteAllLines("c:\\dane\\zawodnicy.txt", dane);
+            File.WriteAllLines("c:\\dane\\zawodnicy.txt", dane,Encoding.UTF8);
         }
 
     }
