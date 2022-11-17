@@ -141,7 +141,6 @@
             // 
             // pcObrazek
             // 
-           
             this.pcObrazek.Location = new System.Drawing.Point(291, 135);
             this.pcObrazek.Name = "pcObrazek";
             this.pcObrazek.Size = new System.Drawing.Size(68, 56);
@@ -173,6 +172,7 @@
             // 
             // pbSun
             // 
+            this.pbSun.BackColor = System.Drawing.Color.Transparent;
             this.pbSun.Image = global::P02ZadaniePogoda.Properties.Resources.sun;
             this.pbSun.Location = new System.Drawing.Point(291, 197);
             this.pbSun.Name = "pbSun";

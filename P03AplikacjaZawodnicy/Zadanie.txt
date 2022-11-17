@@ -1,0 +1,10 @@
+﻿
+
+Dodaj nową opcje , po naciśnięciu przycisku,
+
+wygeneruj pdf z wylistowaniem zawodników wyświetlonych przez listbox
+1) podaj imie, nazwisko, kraj, i datę urodzenia 
+2) przed zapisaniem pliku - wywołaj SaveFileDialog zeby wkazac ścieżke do zapisu 
+3) po stworzeniu pliku wyświetl jego podgląd w webbrowser 
+
+
