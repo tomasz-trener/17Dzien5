@@ -7,4 +7,15 @@ wygeneruj pdf z wylistowaniem zawodników wyświetlonych przez listbox
 2) przed zapisaniem pliku - wywołaj SaveFileDialog zeby wkazac ścieżke do zapisu 
 3) po stworzeniu pliku wyświetl jego podgląd w webbrowser 
 
+Pamiętaj żeby nie umieszczać kodu przetwrzająćego dane wewntrz klasy From
+, która odpowiada za intrefejs. 
 
+Cała logikę genreowania PDF umieść w osobnej klasie: PDFManager
+
+w klaske PDFManager powinna znajdować się metoda: 
+ 
+ void WygenerujPDF(Zawodnik[] zawodnicy)
+ {
+ ....
+	
+ }
