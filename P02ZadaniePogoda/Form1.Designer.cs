@@ -38,6 +38,14 @@
             this.rbCel = new System.Windows.Forms.RadioButton();
             this.rbFar = new System.Windows.Forms.RadioButton();
             this.rbKel = new System.Windows.Forms.RadioButton();
+            this.pcObrazek = new System.Windows.Forms.PictureBox();
+            this.pbClund = new System.Windows.Forms.PictureBox();
+            this.pbSnow = new System.Windows.Forms.PictureBox();
+            this.pbSun = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcObrazek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClund)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSnow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSun)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +139,58 @@
             this.rbKel.Text = "K";
             this.rbKel.UseVisualStyleBackColor = true;
             // 
+            // pcObrazek
+            // 
+           
+            this.pcObrazek.Location = new System.Drawing.Point(291, 135);
+            this.pcObrazek.Name = "pcObrazek";
+            this.pcObrazek.Size = new System.Drawing.Size(68, 56);
+            this.pcObrazek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcObrazek.TabIndex = 9;
+            this.pcObrazek.TabStop = false;
+            // 
+            // pbClund
+            // 
+            this.pbClund.Image = global::P02ZadaniePogoda.Properties.Resources.clouds;
+            this.pbClund.Location = new System.Drawing.Point(291, 197);
+            this.pbClund.Name = "pbClund";
+            this.pbClund.Size = new System.Drawing.Size(68, 56);
+            this.pbClund.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClund.TabIndex = 10;
+            this.pbClund.TabStop = false;
+            this.pbClund.Visible = false;
+            // 
+            // pbSnow
+            // 
+            this.pbSnow.Image = global::P02ZadaniePogoda.Properties.Resources.snow;
+            this.pbSnow.Location = new System.Drawing.Point(291, 197);
+            this.pbSnow.Name = "pbSnow";
+            this.pbSnow.Size = new System.Drawing.Size(68, 56);
+            this.pbSnow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSnow.TabIndex = 11;
+            this.pbSnow.TabStop = false;
+            this.pbSnow.Visible = false;
+            // 
+            // pbSun
+            // 
+            this.pbSun.Image = global::P02ZadaniePogoda.Properties.Resources.sun;
+            this.pbSun.Location = new System.Drawing.Point(291, 197);
+            this.pbSun.Name = "pbSun";
+            this.pbSun.Size = new System.Drawing.Size(68, 56);
+            this.pbSun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSun.TabIndex = 12;
+            this.pbSun.TabStop = false;
+            this.pbSun.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 192);
+            this.ClientSize = new System.Drawing.Size(359, 330);
+            this.Controls.Add(this.pbSun);
+            this.Controls.Add(this.pbSnow);
+            this.Controls.Add(this.pbClund);
+            this.Controls.Add(this.pcObrazek);
             this.Controls.Add(this.rbKel);
             this.Controls.Add(this.rbFar);
             this.Controls.Add(this.rbCel);
@@ -147,6 +202,10 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pcObrazek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClund)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSnow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +223,10 @@
         private System.Windows.Forms.RadioButton rbCel;
         private System.Windows.Forms.RadioButton rbFar;
         private System.Windows.Forms.RadioButton rbKel;
+        private System.Windows.Forms.PictureBox pcObrazek;
+        private System.Windows.Forms.PictureBox pbClund;
+        private System.Windows.Forms.PictureBox pbSnow;
+        private System.Windows.Forms.PictureBox pbSun;
     }
 }
 

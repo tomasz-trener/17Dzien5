@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P02ZadaniePogoda.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,6 +69,32 @@ namespace P02ZadaniePogoda
             double temp = mp.PodajTemperature(miasto);
             lblRaport.Text = String.Format("Temperatura w mieście {0} wynosi {1}",
                 miasto, temp);
+
+            
+            if(jednostka != "c")
+            {
+                mp.Jednostka = "c";
+                temp = mp.PodajTemperature(miasto);
+            }
+            pbSnow.Visible = false;
+            pbClund.Visible = false;
+            pbSun.Visible = false;
+
+            if (temp < 0)
+            {
+                pcObrazek.Image = Resources.snow;
+                pbSnow.Visible = true;
+            }
+            else if (temp < 11)
+            {
+                pcObrazek.Image = Resources.clouds;
+                pbClund.Visible = true;
+            }
+            else
+            {
+                pcObrazek.Image = Resources.sun;
+                pbSun.Visible = true;
+            }
 
         }
     }
